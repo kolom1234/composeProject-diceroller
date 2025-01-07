@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+
+    <!-- (1) 전체 배경 흰색 사각형 (0,0 ~ 300,200) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#B4B4B4"
+        android:strokeWidth="3"
+        android:pathData="M 0,0 H 300 V 200 H 0 Z" />
+
+    <!-- (2) 그리드 선: 세로 x=100, x=200, 가로 y=100 -->
+    <!-- 수직선 x=100 -->
+    <path
+        android:strokeColor="#B4B4B4"
+        android:strokeWidth="3"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M 100,0 V 200" />
+
+    <!-- 수직선 x=200 -->
+    <path
+        android:strokeColor="#B4B4B4"
+        android:strokeWidth="3"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M 200,0 V 200" />
+
+    <!-- 수평선 y=100 -->
+    <path
+        android:strokeColor="#B4B4B4"
+        android:strokeWidth="3"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M 0,100 H 300" />
+
+    <!-- (3) 면1 (상단 왼쪽) : 하나의 점 (중앙) -->
+    <group
+        android:translateX="0"
+        android:translateY="0">
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 50,50 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+    </group>
+
+    <!-- (4) 면2 (상단 가운데) : 2개의 점 (좌상, 우하) -->
+    <group
+        android:translateX="100"
+        android:translateY="0">
+        <!-- 좌상 (25,25) -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우하 (75,75) -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+    </group>
+
+    <!-- (5) 면3 (상단 오른쪽) : 3개의 점 (좌상, 중앙, 우하) -->
+    <group
+        android:translateX="200"
+        android:translateY="0">
+        <!-- 좌상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 중앙 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 50,50 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+    </group>
+
+    <!-- (6) 면4 (하단 왼쪽) : 4개의 점 (좌상, 우상, 좌하, 우하) -->
+    <group
+        android:translateX="0"
+        android:translateY="100">
+        <!-- 좌상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 좌하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+    </group>
+
+    <!-- (7) 면5 (하단 가운데) : 5개의 점 (좌상, 우상, 중앙, 좌하, 우하) -->
+    <group
+        android:translateX="100"
+        android:translateY="100">
+        <!-- 좌상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 중앙 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 50,50 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 좌하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+    </group>
+
+    <!-- (8) 면6 (하단 오른쪽) : 6개의 점 (좌상, 우상, 좌중, 우중, 좌하, 우하) -->
+    <group
+        android:translateX="200"
+        android:translateY="100">
+        <!-- 좌상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우상 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,25 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 좌중 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,50 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우중 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,50 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 좌하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 25,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+        <!-- 우하 -->
+        <path
+            android:fillColor="#000000"
+            android:pathData="M 75,75 m -7,0
+                             a 7,7 0 1,0 14,0
+                             a 7,7 0 1,0 -14,0 Z" />
+    </group>
+
+</vector>

@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.diceroller"
+    namespace = "com.toprunner.diceroller"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.diceroller"
+        applicationId = "com.toprunner.diceroller"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 8
+        versionName = "1.7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -51,6 +51,7 @@ android {
 
 dependencies {
 
+    implementation("com.google.android.gms:play-services-ads:23.3.0")
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
     implementation("androidx.activity:activity-compose:1.9.1")
@@ -59,6 +60,11 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material-icons-extended:<compose_version>")
+    implementation ("androidx.lifecycle:lifecycle-process:2.8.3")
+
+
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
